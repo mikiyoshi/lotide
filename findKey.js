@@ -1,12 +1,15 @@
 // FUNCTION IMPLEMENTATION
 const findKey = function (actual, expected) {
-  // console.log(actual);
-  // console.log(expected);
+  // console.log(actual); // Object
+  // console.log(expected); // function
   const result = [];
   for (const key in actual) {
-    // console.log(key);
-    // console.log(actual[key]);
+    // console.log(key); // key 'Blue Hill',
+    // console.log(actual[key]); // value { stars: 1 },
     // console.log(expected(actual[key]));
+    // expected(actual[key]) // (x) => x.stars === 2
+    // (Akaleri) => Akaleri.stars === 2 // false
+    // (noma) => noma.stars === 2 // true
     if (expected(actual[key])) {
       result.push(key);
     }
