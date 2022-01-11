@@ -1,11 +1,19 @@
 // FUNCTION IMPLEMENTATION
 const findKeyByValue = function (a, b) {
   // console.log(a);
+  // for (const x in a) {
+  //   // console.log(a[x]);
+  //   if (a[x] === b) {
+  //     console.log(x);
+  //     return x;
+  //   }
+  // }
   // console.log(b);
   // console.log(a['comedy']);
   // console.log(bestTVShowsByGenre['comedy']);
   // console.log(bestTVShowsByGenre.comedy);
   const list = ['sci_fi', 'comedy', 'drama'];
+  // when we use for( in ) roop, we don't need 'list' array
   for (const key of list) {
     // console.log(a[key]);
     if (a[key] === b) {
@@ -15,8 +23,8 @@ const findKeyByValue = function (a, b) {
 };
 
 const assertEqual = function (actual, expected) {
-  console.log(actual);
-  console.log(expected);
+  // console.log(actual);
+  // console.log(expected);
   if (actual === expected) {
     // console.log('✅✅✅ Assertion Passed: ' + actual + ' === ' + expected);
     //Template Literals (Template Strings)
