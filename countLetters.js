@@ -3,9 +3,12 @@ const countLetters = function (actual) {
   // console.log(actual);
   const list = {};
   for (let letter of actual) {
-    // console.log(letter);
+    // console.log(list[letter]);
     if (letter !== ' ') {
       list[letter] = (list[letter] || 0) + 1;
+      // {list[letter]: (list[letter] || 0) + 1}
+      // key list[letter]
+      // value (list[letter] || 0) + 1
     }
   }
   console.log(list);
