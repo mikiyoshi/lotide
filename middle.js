@@ -1,19 +1,23 @@
-const eqArrays = function (arrOne, arrTwo) {
-  for (let i = 0; i < arrOne.length; i++) {
-    if (arrOne[i] !== arrTwo[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
+// const eqArrays = function (arrOne, arrTwo) {
+//   console.log(arrOne);
+//   console.log(arrTwo);
+//   for (let i = 0; i < arrOne.length; i++) {
+//     if (arrOne[i] !== arrTwo[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
-const assertArraysEqual = function (actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertArraysEqual = function (actual, expected) {
+//   if (eqArrays(actual, expected)) {
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const middle = function (array) {
   const middleIndex = Math.floor(array.length / 2);
@@ -32,10 +36,16 @@ const middle = function (array) {
   }
 };
 
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
+// console.log(middle([1])); // => []
+// console.log(middle([1, 2])); // => []
+// console.log(middle([1, 2, 3])); // => [2]
+// console.log(middle([1, 2, 3, 4, 5])); // => [3]
+// console.log(middle([1, 2, 3, 4])); // => [2, 3]
+// console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
+// assertArraysEqual(eqArrays(middle([1]), []), true);
+// assertArraysEqual(eqArrays(middle([1, 2]), []), true);
+// assertArraysEqual(eqArrays(middle([1, 2, 3]), [2]), true);
+// assertArraysEqual(eqArrays(middle([1, 2, 3, 4, 5]), [3]), true);
+// assertArraysEqual(eqArrays(middle([1, 2, 3, 4]), [2, 3]), true);
+// assertArraysEqual(eqArrays(middle([1, 2, 3, 4, 5, 6]), [3, 4]), true);
 module.exports = middle;
