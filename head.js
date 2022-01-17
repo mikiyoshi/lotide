@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual');
+// const assertEqual = require('./assertEqual');
 
 // FUNCTION IMPLEMENTATION
 const head = function (arr) {
@@ -22,8 +22,10 @@ const head = function (arr) {
 // TEST CODE
 // assertEqual("Lighthouse Labs", "Bootcamp");
 // assertEqual(1, 1);
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(['Hello', 'Lighthouse', 'Labs']), 'Hello');
-assertEqual(head([]), 'Hello');
-assertEqual(head([0]), 'Hello');
+// assertEqual(head([5, 6, 7]), 5);
+// assertEqual(head(['Hello', 'Lighthouse', 'Labs']), 'Hello');
+// assertEqual(head([]), 'Hello');
+// assertEqual(head([0]), 'Hello');
+// const words = ['Yo Yo', 'Lighthouse', 'Labs'];
+// tail(head(words)); // no need to capture the return value since we are not checking it
 module.exports = head;

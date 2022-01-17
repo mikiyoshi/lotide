@@ -1,19 +1,36 @@
-// FUNCTION IMPLEMENTATION
-const countLetters = function (actual) {
-  // console.log(actual);
-  const list = {};
-  for (let letter of actual) {
-    // console.log(list[letter]);
-    if (letter !== ' ') {
-      list[letter] = (list[letter] || 0) + 1;
-      // {list[letter]: (list[letter] || 0) + 1}
-      // key list[letter]
-      // value (list[letter] || 0) + 1
-    }
-  }
-  console.log(list);
-};
+// const letterPositions = function (sentence) {
+//   // console.log(sentence);
+//   const results = {};
+//   for (let i = 0; i < sentence.length; i++) {
+//     // console.log(results[sentence[i]]);
+//     // results[sentence[i]] = results[sentence[i]].push(i)
+//     // key sentence[i]
+//     // value results[sentence[i]].push(i)
+//     if (results[sentence[i]]) {
+//       results[sentence[i]].push(i);
+//     } else {
+//       results[sentence[i]] = [];
+//       results[sentence[i]].push(i);
+//     }
+//     // results[sentence[i]] = i;
+//   }
+//   console.log(results);
+//   return results;
+// };
 
-// TEST CODE
-countLetters('LHL');
-countLetters('lighthouse in the house');
+// // const assertArraysEqual = function (actual) {
+// // };
+// letterPositions('hello');
+
+const test = [
+  {
+    test1: 'test',
+    test2: 'test',
+    test3: 'test',
+  },
+];
+let one = test.slice();
+test.test1 = [test.test1];
+test.test1.push('test2');
+console.log(test);
+console.log(one);
