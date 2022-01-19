@@ -1,0 +1,6 @@
+node_module/
+.DS_Store
+assertArraysEqual copy.js
+eqObjects01.js
+eqObjects02.js
+eqObjects03.js

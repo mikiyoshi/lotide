@@ -5,7 +5,6 @@ const eqObjects = function (object1, object2) {
   const keyList1 = Object.keys(object1);
   const keyList2 = Object.keys(object2);
   // console.log(keyList1);
-  // console.log(keyList2);
   if (keyList1.length === keyList2.length) {
     // console.log(keyList1);
     for (let x of keyList1) {
@@ -39,10 +38,11 @@ const eqObjects = function (object1, object2) {
         } else {
           return false;
         }
-      }
-      // console.log('no');
-      if (object1[x] !== object2[x]) {
-        return false;
+      } else {
+        // console.log('no');
+        if (object1[x] !== object2[x]) {
+          return false;
+        }
       }
     }
   }
@@ -65,12 +65,12 @@ const assertEqual = function (actual, expected) {
 };
 
 // TEST CODE
-const ab = { a: '1', b: '2' };
-const ba = { b: '2', a: '1' };
-assertEqual(eqObjects(ab, ba), true); // => true
+// const ab = { a: '1', b: '2' };
+// const ba = { b: '2', a: '1' };
+// assertEqual(eqObjects(ab, ba)); // => true
 
-const abc = { a: '1', b: '2', c: '3' };
-assertEqual(eqObjects(ab, abc), false); // => false
+// const abc = { a: '1', b: '2', c: '3' };
+// assertEqual(eqObjects(ab, abc)); // => false
 
 const cd = { c: '1', d: ['2', 3] };
 const dc = { d: ['2', 3], c: '1' };
